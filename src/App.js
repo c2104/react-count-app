@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <p>カウント：{count}</p>
-      <Button btn_click{...() => { setCount(count + 1) }} btn_txt="クリックしてね" />
+      <Button btn_click = {() => { setCount(count + 1) }} btn_txt="クリックしてね" />
     </div>
   );
 }
