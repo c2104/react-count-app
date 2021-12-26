@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css';
+import Button from './Button';
 
 function App() {
 
@@ -7,16 +8,19 @@ function App() {
 
   return (
     <div className="App">
-      <p>カウント：{count}</p>
-      <Button btn_click = {() => { setCount(count + 1) }} btn_txt="クリックしてね" />
+      <div className='button-area'>
+        <Button
+          btn_click = {() => { setCount(count - 1) }}
+          btn_txt="-"
+        />
+        <span className='count'>{count}</span>
+        <Button
+          btn_click = {() => { setCount(count + 1) }}
+          btn_txt="+"
+        />
+      </div>
     </div>
   );
-}
-
-function Button(props) {
-  return (
-    <button onClick={props.btn_click}>{props.btn_txt}</button>
-  )
 }
 
 export default App;
